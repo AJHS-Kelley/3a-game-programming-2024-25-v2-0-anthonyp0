@@ -47,9 +47,12 @@ for i in range(10,100): #
             pass # tells python this loop isnt finished, dont freak out.
 
 # while loops -- musical chairs
-playerScore = 0
+playerScore = 0 
+counter = 0
 while playerScore < 100: # run as long as this is true
     playerScore += random.randint(1,3)
     print(f"Starting : {playerScore}")
 playerScore += random.randint(1,3)
 print(f" After: {playerScore}")
+counter += 1
+print(f"counter:{counter}")
