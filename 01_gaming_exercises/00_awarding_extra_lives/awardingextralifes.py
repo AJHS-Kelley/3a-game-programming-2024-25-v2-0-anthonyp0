@@ -34,8 +34,8 @@ elif highScore >= 10000:
 if highScore > 100000:
    
    print("You have earned two lifes! Lucky Son Of A Gun")
-
-else: ("You have not gained a new life loser!\n")
+else:
+   ("You have not gained a new life loser!\n")
 
 
   
