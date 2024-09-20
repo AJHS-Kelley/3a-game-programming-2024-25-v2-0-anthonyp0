@@ -47,19 +47,32 @@ while playerScore < 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\n")
     print(f"the cpu has {cpuScore} points\n")
     playerChoice = input("Please enter rock, paper, or scissors and press enter\n").lower()
-    if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press enter\n").lower()
-    if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         print("you are not following my instructions. try again.")
         exit()
         
     
-        print(f" you have chosen {playerChoice}.\n")
-    else:
-        print(f" you have chosen {playerChoice}.\n")
+    print(f" you have chosen {playerChoice}.\n")
+else:
+    
+    print(f" you have chosen {playerChoice}.\n")
     # print the current score for
     # let player select rock, paper, or scissors
-    # let the cpu selct rock, paper, or scissors
+    # let the cpu select rock, paper, or scissors
+    cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
+    if cpuChoice == 0:
+            cpuChoice = "rock"
+    elif cpuChoice == 1:
+           cpuChoice = "scissors"
+    elif cpuChoice  == 2:
+           cpuChoice = "paper"
+    else:
+            print("Unable to determine CPU choice.\n Please restart.\n")
+            exit()
+    print(f"CPU Choice: {cpuChoice}")
+          
     # compare player choice to cpu choice
     # print the results to the screen
     # award point to winner and output results
