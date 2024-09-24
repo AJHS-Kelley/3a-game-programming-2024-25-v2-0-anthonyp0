@@ -74,6 +74,35 @@ else:
     print(f"CPU Choice: {cpuChoice}")
           
     # compare player choice to cpu choice
+    if playerChoice =="rock" and cpuChoice == "paper":
+        # CPU wins
+        print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+    elif playerChoice == "rock" and cpuChoice == "scissors":
+        
+    # Player wins
+    elif playerChoice == "rock" and cpuChoice == "rock":
+         
+    # Draw
+    elif # player chooses scissors, cpu chooses rock:
+     print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+     print("The cpu scores a point.\n")
+    # cpu wins 
+    elif # player choose scissors, cpu choose paper:
+    print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the player scores a point.\n")
+    # player wins
+    elif # player choose rock, cpu choose scissors:
+    print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the player scores a point.\n")
+    # player wins
+    playerScore += 1
+    elif playerChoice == "rock" and cpuChoice == "rock":
+    # DRAW 
+print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+print("its a draw!\n")
+elif 
+
+    
     # print the results to the screen
     # award point to winner and output results
 
