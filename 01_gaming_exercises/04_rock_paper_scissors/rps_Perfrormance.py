@@ -27,48 +27,50 @@ while loopCount < loopsReq:
  loopsReq= int(input("how many loops do you want\n enter an integer, no commas, and press enter.\n"))
 # req is the universal abbreviation in computer programming for request. reqs = REQUESTS.
  rpsTimeStart= time.time() # returns the number of seconds since jan 01, 1970 @ 12:00am
-    # print the current score for
     # let player select rock, paper, or scissors
     # let the cpu select choice at random
-    cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
-    if cpuChoice == 0:
+cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
+if cpuChoice == 0:
             cpuChoice = "rock"
-    elif cpuChoice == 1:
+elif cpuChoice == 1:
            cpuChoice = "scissors"
-    elif cpuChoice  == 2:
+elif cpuChoice  == 2:
            cpuChoice = "paper"
-    else:
+else:
             print("Unable to determine CPU choice.\n Please restart.\n")
             exit()
             # let player select choice at random.
             
-    print(f"CPU Choice: {cpuChoice}")
-    cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
-    if cpuChoice == 0:
+print(f"CPU Choice: {cpuChoice}")
+cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
+if cpuChoice == 0:
             cpuChoice = "rock"
-    elif cpuChoice == 1:
+elif cpuChoice == 1:
            cpuChoice = "scissors"
-    elif cpuChoice  == 2:
+elif cpuChoice  == 2:
            cpuChoice = "paper"
-    else:
+else:
             print("Unable to determine CPU choice.\n Please restart.\n")
             exit()
     # compare player choice to cpu choice
-    if playerChoice =="rock" and cpuChoice == "paper":
+if playerChoice =="rock" and cpuChoice == "paper":
         # CPU wins
         print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    elif playerChoice == "rock" and cpuChoice == "scissors":
+elif playerChoice == "rock" and cpuChoice == "scissors":
         
     # Player wins
-    elif playerChoice == "rock" and cpuChoice == "rock":
-         print("Tie. Go again")
+elif playerChoice == "rock" and cpuChoice == "rock":
+
+   print("Draw. Go again")
+   numDraws+=1
          
     # Draw
-    elif # player chooses scissors, cpu chooses rock:
+elif # player chooses scissors, cpu chooses rock:
      print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
      print("The cpu scores a point.\n")
     # cpu wins 
-    elif # player choose scissors, cpu choose paper:
+elif # player choose scissors, cpu choose paper:
+    
     print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
     print("the player scores a point.\n")
     # player wins
@@ -77,7 +79,8 @@ print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
 print("the player scores a point.\n")
     # player wins
 playerScore += 1
-    elif playerChoice == "rock" and cpuChoice == "rock":
+
+elif playerChoice == "rock" and cpuChoice == "rock":
     # DRAW 
 print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
 print("its a draw!\n")
