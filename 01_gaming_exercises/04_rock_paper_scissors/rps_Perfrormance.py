@@ -22,8 +22,11 @@ Anything in between the sets of double-quotes is just ignored.
 if you need to write large comments, its easier to use multi-line strings than puuting a # in front of 15 different lines.
 """
 # MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
-   
+while loopCount < loopsReq:
+ loopCount=0
+ loopsReq= int(input("how many loops do you want\n enter an integer, no commas, and press enter.\n"))
+# req is the universal abbreviation in computer programming for request. reqs = REQUESTS.
+ rpsTimeStart= time.time() # returns the number of seconds since jan 01, 1970 @ 12:00am
     # print the current score for
     # let player select rock, paper, or scissors
     # let the cpu select choice at random
@@ -78,8 +81,25 @@ playerScore += 1
     # DRAW 
 print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
 print("its a draw!\n")
+numDraws+=1
 else:
 print("unable to determine a winner. please restart.")
+
+loopCount+= 1
+
+print(f"Your final score : {playerScore}\n Cpu Final score : {cpuScore}\n Draws : {numDraws}\n.")
+if playerScore > cpuScore:
+       print(f"Congratulations. a winner is you\n.")
+elif cpuScore > playerScore:
+      print(f"the cpu wins. you are a disappointment to all.\n")
+else:
+      print("Unable to determiner a winner.\n please restart.\n")
+      exit()
+
+rpsTimeStop= time.time()
+rpsTime = rpsTimeStop - rpsTimeStart
+print(f"Number of loops: {loopCount}.\n")
+print(f"Execution Time {rpsTime:.2F}seconds.\n")
 
     
     # print the results to the screen
