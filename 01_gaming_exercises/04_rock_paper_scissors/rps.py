@@ -47,58 +47,61 @@ while playerScore < 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\n")
     print(f"the cpu has {cpuScore} points\n")
     playerChoice = input("Please enter rock, paper, or scissors and press enter\n").lower()
-    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
+if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press enter\n").lower()
-    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
+if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         print("you are not following my instructions. try again.")
         exit()
         
     
-    print(f" you have chosen {playerChoice}.\n")
+print(f" you have chosen {playerChoice}.\n")
 else:
-    
-    print(f" you have chosen {playerChoice}.\n")
+
+print(f" you have chosen {playerChoice}.\n")
     # print the current score for
     # let player select rock, paper, or scissors
     # let the cpu select rock, paper, or scissors
-    cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
-    if cpuChoice == 0:
+cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
+if cpuChoice == 0:
             cpuChoice = "rock"
-    elif cpuChoice == 1:
+elif cpuChoice == 1:
            cpuChoice = "scissors"
-    elif cpuChoice  == 2:
+elif cpuChoice  == 2:
            cpuChoice = "paper"
-    else:
+else:
             print("Unable to determine CPU choice.\n Please restart.\n")
             exit()
-    print(f"CPU Choice: {cpuChoice}")
+print(f"CPU Choice: {cpuChoice}")
           
     # compare player choice to cpu choice
-    if playerChoice =="rock" and cpuChoice == "paper":
+if playerChoice =="rock" and cpuChoice == "paper":
         # CPU wins
         print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    elif playerChoice == "rock" and cpuChoice == "scissors":
+elif playerChoice == "rock" and cpuChoice == "scissors":
         
     # Player wins
-    elif playerChoice == "rock" and cpuChoice == "rock":
-         
-    # Draw
-    elif # player chooses scissors, cpu chooses rock:
+elif playerChoice == "rock" and cpuChoice == "rock":
+    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}")
+    print(f"Tie. Go again")
+         # Draw
+
+
+elif playerChoice == "scissors"and cpuChoice == "rock":
      print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
      print("The cpu scores a point.\n")
     # cpu wins 
-    elif # player choose scissors, cpu choose paper:
+elif playerChoice == "scissors"and cpuChoice == "paper":
     print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
     print("the player scores a point.\n")
     # player wins
-    elif # player choose rock, cpu choose scissors:
+elif playerChoice == "rock"and cpuChoice == "scissors":
     print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
     print("the player scores a point.\n")
     # player wins
     playerScore += 1
-    elif playerChoice == "rock" and cpuChoice == "rock":
+elif playerChoice == "rock" and cpuChoice == "rock":
     # DRAW 
-print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+ print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
 print("its a draw!\n")
 else:
 

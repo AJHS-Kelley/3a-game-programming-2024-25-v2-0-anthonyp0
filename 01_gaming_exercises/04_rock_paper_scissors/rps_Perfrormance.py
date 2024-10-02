@@ -13,14 +13,6 @@ cpuChoice = None
 
 
 
-
-# THE RULES using multi-line strings
-
-# Multi-Line strings can be used as big comments
-"""
-Anything in between the sets of double-quotes is just ignored.
-if you need to write large comments, its easier to use multi-line strings than puuting a # in front of 15 different lines.
-"""
 # MAIN GAME LOOP
 while loopCount < loopsReq:
  loopCount=0
@@ -37,74 +29,81 @@ elif cpuChoice == 1:
 elif cpuChoice  == 2:
            cpuChoice = "paper"
 else:
-            print("Unable to determine CPU choice.\n Please restart.\n")
-            exit()
-            # let player select choice at random.
-            
-print(f"CPU Choice: {cpuChoice}")
-cpuChoice = random.randint(0, 2) # randomly select 0, 1 , or 2.
-if cpuChoice == 0:
-            cpuChoice = "rock"
-elif cpuChoice == 1:
-           cpuChoice = "scissors"
-elif cpuChoice  == 2:
-           cpuChoice = "paper"
+        print("Unable to determine Cpu choice.\n Please Restart.")
+        exit()
+playerChoice = random.randint(0,2) # randomly select 0,1, or 2.
+if playerChoice == 0:
+            playerChoice = "rock"
+elif playerChoice == 1:
+           playerChoice = "scissors"
+elif playerChoice  == 2:
+           playerChoice = "paper"
 else:
-            print("Unable to determine CPU choice.\n Please restart.\n")
-            exit()
+        print("Unable to determine Cpu choice.\n Please Restart.")
+        exit()
+
     # compare player choice to cpu choice
-if playerChoice =="rock" and cpuChoice == "paper":
-        # CPU wins
+if playerChoice == "rock" and cpuChoice == "paper":
+        # CPU WINS
+    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+    print(" the cpu scores a point.\n")
+    # cpuScore += 1
+    cpuScore = cpuScore + 1
+elif playerChoice == "rock " and cpuScore == "scissors":
+        # player wins
         print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-elif playerChoice == "rock" and cpuChoice == "scissors":
-        
-    # Player wins
+        print("you win a point brodie.\n")
+        playerScore += 1
 elif playerChoice == "rock" and cpuChoice == "rock":
-
-   print("Draw. Go again")
-   numDraws+=1
-         
-    # Draw
-elif # player chooses scissors, cpu chooses rock:
-     print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-     print("The cpu scores a point.\n")
-    # cpu wins 
-elif # player choose scissors, cpu choose paper:
-    
-    print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the player scores a point.\n")
-    # player wins
-     # player choose rock, cpu choose scissors:
-print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
-print("the player scores a point.\n")
-    # player wins
-playerScore += 1
-
-elif playerChoice == "rock" and cpuChoice == "rock":
-    # DRAW 
-print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-print("its a draw!\n")
-numDraws+=1
+        # draw
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("its a draw.\n")
+        numDraws +=1 
+elif playerChoice == "scissors" and cpuChoice == "rock":
+        # cpu wins
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point.\n")
+        cpuScore +=1
+elif playerChoice == "scissors" and cpuChoice == "paper":
+        # player wins
+        print(f"the cpu chose {cpuChoice}and you chose{playerChoice}.\n")
+        print("you win a ppoint brodie.\n")
+        playerScore+=1
+elif playerChoice == "scissors" and cpuChoice == "scissors":
+        # draw
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("its a draw!.\n")
+        numDraws+=1
+elif playerChoice=="paper" and cpuChoice=="rock":
+        #player wins
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("you win a point brodie.\n")
+        playerScore+=1
+elif playerChoice=="paper" and cpuChoice == "paper":
+        # draw
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("its a draw.\n")
+        numDraws+=1
+elif playerChoice=="paper" and cpuChoice == "scissors":
+        #CPU wins
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point.\n")
+        cpuScore+=1
 else:
-print("unable to determine a winner. please restart.")
+        print("unable to determine a winner. please restart.\n")
+        exit()
+        loopCount +=1
 
-loopCount+= 1
-
-print(f"Your final score : {playerScore}\n Cpu Final score : {cpuScore}\n Draws : {numDraws}\n.")
+print(f"your final score: {playerScore}\n cpu final score:{cpuScore}\n Draws:{numDraws}\n")
 if playerScore > cpuScore:
-       print(f"Congratulations. a winner is you\n.")
-elif cpuScore > playerScore:
-      print(f"the cpu wins. you are a disappointment to all.\n")
+        print(f"congratulations you won!\n")
+elif cpuScore>playerScore:
+        print(f"the cpu wins. you suck.\n")
 else:
-      print("Unable to determiner a winner.\n please restart.\n")
-      exit()
+        print("unable to determine a winner.\n please restart.\n")
+        exit()        
 
-rpsTimeStop= time.time()
+rpsTimeStop = time.time()
 rpsTime = rpsTimeStop - rpsTimeStart
-print(f"Number of loops: {loopCount}.\n")
-print(f"Execution Time {rpsTime:.2F}seconds.\n")
-
-    
-    # print the results to the screen
-    # award point to winner and output results
-
+print(f"Number of  loops: {loopCount}\n")
+print(f"Execution Time {rpsTime:2F} seconds\n")

@@ -102,3 +102,8 @@ elif cpuScore>playerScore:
 else:
         print("unable to determine a winner.\n please restart.\n")
         exit()        
+
+rpsTimeStop = time.time()
+rpsTime = rpsTimeStop - rpsTimeStart
+print(f"Number of  loops: {loopCount}\n")
+print(f"Execution Time {rpsTime:2F} seconds\n")
