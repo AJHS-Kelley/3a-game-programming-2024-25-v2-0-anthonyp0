@@ -89,31 +89,31 @@ while playerScore < 5 and cpuScore < 5:
      print("The cpu scores a point.\n") 
      cpuScore+=1
 
-elif playerChoice == "scissors"and cpuChoice == "paper":
+    elif playerChoice == "scissors"and cpuChoice == "paper":
     # player wins 
     print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
     print("the player scores a point.\n")
     playerScore+=1
     
-elif playerChoice == "scissors"and cpuChoice == "scissors":
+    elif playerChoice == "scissors"and cpuChoice == "scissors":
     print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
     print("Draw! Try again.\n")
     
-elif playerChoice == "paper" and cpuChoice == "rock":
+    elif playerChoice == "paper" and cpuChoice == "rock":
   # player wins
  print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
 print("the player wins a point\n")
 playerScore+=1
 
-elif playerChoice == "paper" and cpuChoice == "paper":
+    elif playerChoice == "paper" and cpuChoice == "paper":
 # draw
 print(f"the cpu chose {cpuChoice} and the player chose {playerChoice}.\n")
 print("its a draw. try again.\n")
-elif playerChoice == "paper" and cpuChoice == "scissors":
+    elif playerChoice == "paper" and cpuChoice == "scissors":
 print(f" the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
 print("the cpu wins a point.\n")
 cpuScore+=1
-else:
+    else:
 print("unable to determine winner. please restart.\n")
 exit()   
 print(f"your final score : {playerScore}\n cpu final score : {cpuScore}\n")
