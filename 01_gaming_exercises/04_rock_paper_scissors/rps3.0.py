@@ -13,7 +13,9 @@ cpuScore = 0
 cpuChoice = None
 
 # PLAYER NAME INPUT
-def playerName(): # function signature -- name of function, (arguements if any)
+def playerName() -> str: # function signature -- name of function, (arguements if any)
+    """gets the name from the player and then returns it """
+    # the line above is called a docstring, it gives a brief example of what the function does
     playerName = input("Please type your name and press enter\n")
     print(f"Hello {playerName}!\n")
     isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
@@ -27,10 +29,11 @@ def playerName(): # function signature -- name of function, (arguements if any)
 playerName = playerName()
 
 # THE RULES using multi-line strings
-def rules():
-        print(f"""
+def rules(): None
+""" this function prints the rules for rock paper and scissors"""
+print(f"""
 
-        Welcome to rock, paper , scissors bud!
+        Welcome, {playerName} to rock, paper , scissors bud!
         its time to play rock, paper , scissors! Get ready!
         You will play against the cpu. the first person to score five points wins.
         you will select from rock, paper, scissors.
@@ -44,7 +47,8 @@ def rules():
         # if no a return statement is not required
 
 
-def playerChoice():
+def playerChoice() -> str:
+    """ allows the player to choose rock paper or scissors"""
 
 # MAIN GAME LOOP
 while playerScore < 5 and cpuScore < 5:
