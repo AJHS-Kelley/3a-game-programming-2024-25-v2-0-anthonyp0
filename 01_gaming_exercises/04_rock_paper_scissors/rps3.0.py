@@ -73,153 +73,98 @@ def cpuChoice():
         print("Unable to determine CPU choice.\n Please restart.\n")
         exit()
     return cpuChoice
-
+# remove the lines of code that add score to player, cpu, or draws below.
 def pickWinner(playerChoice: str, cpuChoice: str) -> str:
- """Determines the winner using player and CPU choices."""
+    """Determines the winner using player and CPU choices."""
     if playerChoice == "rock" and cpuChoice == "paper": 
- # CPU WINS 
+        # CPU WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
-        cpuScore += 1  
-        return "CPU Wins"
+         
+        return "cpu wins"
     elif playerChoice == "rock" and cpuChoice == "scissors": 
         # PLAYER WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
-        playerScore += 1 
-        return "Player wins"
-    elif playerChoice == "rock" and cpuChoice == "rock"
+       
+        return "player wins"
+    elif playerChoice == "rock" and cpuChoice == "rock":
+            # draw
+            print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+            print("its a draw!\n")
+            return "draw"
+    elif playerChoice == "scissors" and cpuChoice == "rock":
+        # Cpu wins
+            print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+            print("the cpu wins a point")
+            
+            return "cpu wins"
+    elif playerChoice == "scissors" and cpuChoice == "paper":
+            # player wins
+            print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+            print("you win a point\n")
+            
+            return "player wins"
+    elif playerChoice == "scissors" and cpuChoice == "scissors":
         # draw
         print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
         print("its a draw!\n")
-        return "draw"
-    elif playerChoice == "scissors" and cpuChoice == "rock"
-    # Cpu wins
-        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-        print("the cpu wins a point")
-        cpuScore += 1
-    return "cpu wins"
-    elif playerChoice == "scissors" and cpuChoice == "paper"
+    elif playerChoice == "paper" and cpuChoice == "rock":
         # player wins
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-    print("you win a point\n")
-    playerScore+=1
-    return "player wins"
-    elif playerChoice == "scissors" and cpuChoice == "scissors"
-    # draw
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-    print("its a draw!\n")
-    elif playerChoice == "paper" and cpuChoice == "rock"
-    # player wins
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-    print("you win a point/n")
-    playerScore+=1
-    return "player wins"
-    elif playerChoice == "paper" and cpuChoice == "paper"
-    # draw
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-    print("its a draw")
-    return "draw"
-    elif playerChoice == "paper" and cpuChoice == "scissors"
-    # cpu wins
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
-    print("the cpu wins\n")
-    cpuScore+=1
-    return "cpu wins"
-    else:
-    print("unable to determine a winner. please restart\n")
-    exit()
-
-def score(winner: str)-> int:
-"""this function uses the winner to update the score for cpu, num, draws, and player score"""
-if winner == "Player Wins":
-score = 1
-elif winner == "CPU Wins":
-score = 1
-else: # This is a DRAW. 
-score = 0
- return score
-
-# MAIN GAME LOOP 
- while playerScore < 5 and cpuScore < 5: 
- print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n") 
- 
-
-
- print(f"Your Final Score: {playerScore}\nCPU Final Score: {cpuScore}\n")
- if playerScore > cpuScore: 
-    print(f"Congratulations {playerName}, a winner is you!\n")
- elif cpuScore > playerScore: 
-    print(f"The CPU wins. You are a disappointment to all.\n")
- else: 
-    print("Unable to determine a winner.\nPlease restart.\n")
-    exit()
-# MAIN GAME LOOP
-    while playerScore < 5 and cpuScore < 5:
-        print(f"{playerName} you have {playerScore} points.\n")
-    
-
- # print(f"CPU Choice: {cpuChoice}")
-          
-    # compare player choice to cpu choice
-    if playerChoice =="rock" and cpuChoice == "paper":
-        # CPU wins
-        print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-        print("the cpu wins a point")
-        cpuScore+=1
-    elif playerChoice == "rock" and cpuChoice == "scissors":
-       # player wins
-       print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-       playerScore+=1
-    elif playerChoice == "rock" and cpuChoice == "rock":
-    # draw
-        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}")
-        print(f"Draw! Try again.")
-         
-    elif playerChoice == "scissors"and cpuChoice == "rock":
-     # cpu wins 
-        print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("The cpu scores a point.\n") 
-    cpuScore+=1
-
-    elif playerChoice == "scissors"and cpuChoice == "paper":
-    # player wins 
-    print(f"The cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the player scores a point.\n")
-    playerScore+=1
-    
-    elif playerChoice == "scissors"and cpuChoice == "scissors":
-    print(f"the cpu choose {cpuChoice} and you chose {playerChoice}.\n")
-    print("Draw! Try again.\n")
-    
-elif playerChoice == "paper" and cpuChoice == "rock":
-  # player wins
-    print(f"the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-print("the player wins a point\n")
-playerScore+=1
-
-elif playerChoice == "paper" and cpuChoice == "paper":
-# draw
-print(f"the cpu chose {cpuChoice} and the player chose {playerChoice}.\n")
-    print("its a draw. try again.\n")
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+        print("you win a point\n")
+        
+        return "player wins"
+    elif playerChoice == "paper" and cpuChoice == "paper":
+        # draw
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+        print("its a draw")
+        return "draw"
     elif playerChoice == "paper" and cpuChoice == "scissors":
-    print(f" the cpu chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point.\n")
-    cpuScore+=1
+        # cpu wins
+        print(f"the cpu chose {cpuChoice} and you chose {playerChoice}\n")
+        print("the cpu wins\n")
+        
+        return "cpu wins"
     else:
-    print("unable to determine winner. please restart.\n")
-    exit()   
-    print(f"your final score : {playerScore}\n cpu final score : {cpuScore}\n")
-    if playerScore > cpuScore:
-        print(f"congratulations {playerName}, heres your w!\n")
-    elif cpuScore > playerScore:
-        print(f"the cpu wins. you are such a loser.\n")
-    else:
-        print("unable to determine a winner.\n please restart.\n")
+        print("unable to determine a winner. please restart\n")
         exit()
 
+def score(winner: str)-> int:
+    """this function uses the winner to update the score for cpu, num, draws, and player score"""
+    if winner == "player wins":
+     score = 1
+    elif winner == "cpu wins":
+        score = 1
+    else: # This is a DRAW. 
+        score = 0
+    return score
 
+def matchWinner(playerScore: int, cpuScore: int) -> bool:
+    """ this function detrmines if a player has won the game or not by scoring 5 points."""
+    if playerScore >= 5:
+        print("congratulations! you are the winner.\n")
+        return True
+    elif cpuScore>=5:
+        print("sadly u lost to an bot.\n")
+        return True
+    else: # no winner yet
+        return False
     
-    # print the results to the screen
-    # award point to winner and output results
+def playGame(playerScore:int , cpuScore: int)-> None:
+    """ this function will use all other function to play rock , paper, scissors."""
+    while True:
+        cpuPick = cpuChoice()
+        playerPick= playerChoice()
+        roundWinner = pickWinner(playerPick, cpuPick)
+        if roundWinner == "player wins":
+            playerScore+=score(roundWinner)
+        if roundWinner == "cpu wins":
+            cpuScore += score(roundWinner)
+        print(f"player score: {playerScore}\n")
+        print(f"cpu score: {cpuScore}\n")
 
+
+        if matchWinner(playerScore, cpuScore)== True:
+            break
+playGame(playerScore, cpuScore)
