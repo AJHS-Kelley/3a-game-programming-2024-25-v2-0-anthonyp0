@@ -17,6 +17,16 @@ def helloWorldMulti(): # FUNCTION SIGNATURE
     """)
     # allow the user to select (input) a choice for the language.
     language = input("What language do you want?\n Please type 1 for english, 2 for spanish and 3 for french\n")
+    if language == "1":
+        print("Hello world!\n")
+    elif language == "2":
+        print("Hola Mundo!\n")
+    elif language == "3":
+        print("Salut tout le monde!\n")
+    else:
+        print("Please pick an number.\n")
+    
+
     # print "Hello, World!" to the screen in that language.
     helloWorldMulti()
     print(f"English,Spanish,French")
