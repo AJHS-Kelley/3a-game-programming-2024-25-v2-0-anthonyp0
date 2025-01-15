@@ -12,7 +12,7 @@ logFileName = "dragonrealmlog.txt"
 # ex dragonrealmlog1132am.txt 
 
 # step 2 -- create / open the file to save the data
-saveData = open(logFileName, "x")
+saveData = open(logFileName, "a")
 # file modes
 # "x" creates file, if file exists, exit with error message
 # "w" creates file, if file exists, erase and overwrite file contents
