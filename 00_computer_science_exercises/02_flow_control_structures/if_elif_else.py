@@ -26,7 +26,7 @@ if color == "Red" :# COMMON ERRORS FOR STUDENTS IS USING = INSTEAD OF ==
 else: 
      print("Your shirt is not the correct uniform color \n")
 weather = "Rainy"
-if weather == "Rainy"
+if weather == "Rainy":
     print("Its the right weather")
 else : 
       print("It is not the right weather")
